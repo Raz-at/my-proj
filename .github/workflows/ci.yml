@@ -1,0 +1,33 @@
+name: Python CI
+
+on:
+  push:
+    branches:
+      - master  # Trigger the pipeline when changes are pushed to the master branch
+  pull_request:
+    branches:
+      - master  # Trigger the pipeline for pull requests to master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu environment for the build
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2  # Checkout the repository code
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'  # Use Python 3.8 (or another version)
+
+    - name: Install dependencies
+      run: |
+        python -m venv venv
+        . venv/bin/activate
+        pip install -r requirements.txt  # Install dependencies
+
+    - name: Run tests
+      run: |
+        . venv/bin/activate
+        pytest  # Run tests with pytest
