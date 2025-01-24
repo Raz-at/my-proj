@@ -1,6 +1,9 @@
-print("hello world")
-<<<<<<< HEAD
-print("lelo khalo")
-=======
-print("lelo khalo")
->>>>>>> 0d929cc (added new tests)
+# app.py
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def mul(a, b):
+    return a * b
