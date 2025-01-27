@@ -29,8 +29,8 @@ jobs:
 
     - name: Run tests
       run: |
-        . venv/bin/activate
-        pytest  # Run tests with pytest
+        export PYTHONPATH=$PYTHONPATH:$(pwd)
+        pytest tests/
 
     
     
