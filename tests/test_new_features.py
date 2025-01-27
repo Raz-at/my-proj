@@ -2,7 +2,7 @@ import unittest
 from app import add, subtract
 
 # Importing the tests from your custom_unittest module
-from cust_unittest import TestApp
+# from cust_unittest import TestApp
 
 # Define additional test cases or new tests here
 class TestNewFeatures(unittest.TestCase):
