@@ -32,6 +32,7 @@ jobs:
         source venv/bin/activate
         export PYTHONPATH=$PYTHONPATH:$(pwd)
         pytest tests/
+        python -m unittest cust_unittest.py 
 
     
     
