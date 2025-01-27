@@ -1,5 +1,5 @@
 import pytest
-from app import add, subtract
+from apptest import add, subtract
 
 def test_add():
     assert add(2, 2) == 4
