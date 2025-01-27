@@ -2,7 +2,7 @@ import pytest
 from app import add, subtract
 
 def test_add():
-    assert add(1, 2) == 3
+    assert add(2, 2) == 4
 
 def test_subtract():
     assert subtract(2, 1) == 1
